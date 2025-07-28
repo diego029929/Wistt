@@ -6,33 +6,64 @@
   <title>Atelier Nomade</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Raleway:wght@400;600&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Raleway:wght@400;600&display=swap');
 
     body {
       font-family: 'Raleway', sans-serif;
-      background: linear-gradient(to right, #fdfbfb, #ebedee);
+      background: linear-gradient(to right, #f9fafb, #f3f4f6);
     }
 
-    h1 {
+    h1, h2 {
       font-family: 'Playfair Display', serif;
     }
 
-    .fade {
-      animation: fade 1.5s ease-in-out both;
+    .fade-in {
+      animation: fadeIn 1.3s ease-in-out both;
     }
 
-    @keyframes fade {
+    @keyframes fadeIn {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
     }
+
+    .glow-button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
   </style>
 </head>
-<body class="text-center py-20 px-6 fade">
-  <h1 class="text-5xl font-bold text-gray-800 mb-2">Atelier Nomade</h1>
-  <p class="text-lg text-gray-600 mb-6">Créations textiles éthiques et locales</p>
-  <img src="https://source.unsplash.com/800x500/?handmade,fashion"
-       class="mx-auto rounded-2xl shadow-xl transition-transform hover:scale-105 mb-10" />
-  <a href="#"
-     class="bg-black text-white px-6 py-3 rounded-full hover:bg-gray-800 transition">Voir nos produits</a>
+<body class="text-gray-800 bg-white">
+
+  <!-- HEADER -->
+  <header class="text-center py-10 fade-in">
+    <h1 class="text-5xl font-bold text-gray-900">Atelier Nomade</h1>
+    <p class="text-lg text-gray-500 mt-2">Créations textiles éthiques et locales</p>
+  </header>
+
+  <!-- IMAGE HERO -->
+  <section class="w-full fade-in">
+    <img src="https://source.unsplash.com/1600x600/?handmade,fashion"
+         alt="Collection artisanale"
+         class="w-full h-[400px] object-cover rounded-none shadow-xl" />
+  </section>
+
+  <!-- TEXTE + DESCRIPTION -->
+  <section class="max-w-3xl mx-auto text-center py-16 px-6 fade-in">
+    <h2 class="text-3xl font-semibold mb-4">Des vêtements qui ont une âme</h2>
+    <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+      Confectionnés à la main, nos modèles allient tradition, modernité et conscience écologique.
+      Chaque pièce est unique, tissée avec soin par des artisanes locales dans notre atelier.
+    </p>
+    <a href="#"
+       class="glow-button bg-black text-white px-8 py-3 rounded-full text-lg transition duration-300 inline-block">
+       Découvrir la collection
+    </a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="text-center text-sm text-gray-400 py-8">
+    © 2025 Atelier Nomade — Fait main avec passion
+  </footer>
+
 </body>
 </html>
